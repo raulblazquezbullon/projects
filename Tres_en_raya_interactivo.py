@@ -97,7 +97,7 @@ def ganador(matriz,jugador,ficha):
         return True
     
 # Longitud del tablero
-L = 15
+L = 12
 
 # Nicks de los jugadores
 jugador1 = input(u'Nombre jugador 1: ')
