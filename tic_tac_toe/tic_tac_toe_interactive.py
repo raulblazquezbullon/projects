@@ -118,7 +118,7 @@ def circle(fig, L, player, posx=0, posy=0):
     
     fig.plot(R*np.cos(theta) + posx, R*np.sin(theta) + posy, "b-")
     fig.axis("equal")
-    plt.title(f"{player}'s turn", fontsize = "x-large")
+    plt.title(f"{player}'s turn", fontsize="x-large")
     plt.draw()
 
 
@@ -283,7 +283,7 @@ def check_winner(matrix, player, piece):
     """
 
     if winner_position(matrix, piece):
-        plt.title(f"{player} wins", fontsize = "x-large")
+        plt.title(f"{player} wins", fontsize="x-large")
         return True
     
 
@@ -315,7 +315,7 @@ def main():
     logger.info("Board created")
 
     plt.title(f"{player1*(starts == 0) + player2*(starts == 1)}'s turn", 
-              fontsize = "x-large")
+              fontsize="x-large")
 
     # Play
     play_num = 1
@@ -327,8 +327,8 @@ def main():
                 
                 plt.draw()
 
-                play(coord, L, play_num, starts, 
-                            players, dicc, matrix, ax)
+                play(coord, L, play_num, starts,
+                     players, dicc, matrix, ax)
                 break
 
             except AssertionError as error:
@@ -346,7 +346,7 @@ def main():
         
         play_num += 1
         if play_num == 10:
-            plt.title("Draw", fontsize = "x-large")
+            plt.title("Draw", fontsize="x-large")
             logger.warning("Draw")
             break
         
